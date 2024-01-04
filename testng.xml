@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="Utils.Listeners">
+
+        </listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/Pavan/IdeaProjects/Appium">
+        <classes>
+<!--            <class name="AndroidTests.BasicFunctionality">-->
+<!--                <methods>-->
+<!--                    <include name="sampleInvokeDriver"/>-->
+<!--                    <include name="longPress"/>-->
+<!--                    <include name="scrollProgram"/>-->
+<!--                    <include name="dragNDrop"/>-->
+<!--                    <include name="landScape"/>-->
+<!--                    <include name="keyEvents"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="AndroidTests.BrowserTest">-->
+<!--                <methods>-->
+<!--                    <include name="browser"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="AndroidTests.eCommerceTest">
+                <methods>
+                    <include name="mobileBrowser"/>
+                    <include name="eCommerceTestcase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
