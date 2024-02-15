@@ -31,9 +31,9 @@ public class BaseTest {
        options.setApp("C:\\Users\\Pavan\\IdeaProjects\\Appium\\src\\test\\java\\resources\\General-Store.apk");
         options.setDeviceName("12fd212");
         options.setChromedriverExecutable("C:\\Users\\Pavan\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
-    //    options.setCapability("browserName","Chrome");
-//        options.setCapability("appActivity","com.androidsample.generalstore.CartActivity");
-//        options.setCapability("appPackage", "com.androidsample.generalstore");
+        options.setCapability("browserName","Chrome");
+        options.setCapability("appActivity","com.androidsample.generalstore.CartActivity");
+        options.setCapability("appPackage", "com.androidsample.generalstore");
         driver = new AndroidDriver(new URL(" http://127.0.0.1:4723"), options);
         // Assuming 'driver' is an instance of AppiumDriver
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
