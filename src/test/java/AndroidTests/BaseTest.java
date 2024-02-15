@@ -18,6 +18,7 @@ public class BaseTest {
     public AppiumDriverLocalService service;
 
     @BeforeClass
+
     public void configAppium() throws IOException {
 
 
@@ -26,8 +27,7 @@ public class BaseTest {
                 withAppiumJS(new File("C:\\Users\\Pavan\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
-        UiAutomator2Options options = new UiAutomator2Options();
-        // options.setApp("C:\\Users\\Pavan\\IdeaProjects\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
+        UiAutomator2Options options = new UiAutomator2Options();options.setApp("C:\\Users\\Pavan\\IdeaProjects\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
        options.setApp("C:\\Users\\Pavan\\IdeaProjects\\Appium\\src\\test\\java\\resources\\General-Store.apk");
         options.setDeviceName("12fd212");
         options.setChromedriverExecutable("C:\\Users\\Pavan\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
@@ -37,6 +37,7 @@ public class BaseTest {
         driver = new AndroidDriver(new URL(" http://127.0.0.1:4723"), options);
         // Assuming 'driver' is an instance of AppiumDriver
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 
 //        service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Pavan\\IdeaProjects\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk")).withIPAddress("127.0.0.1").usingPort(4723).build();
     }
